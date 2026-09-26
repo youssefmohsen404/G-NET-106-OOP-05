@@ -18,6 +18,24 @@
             //copying it's reference : it just assigns the address of the object in the heap to the variable and 
             // u get one object here
             #endregion
+            #region Q2  Shallow Copy vs Deep Copy
+            //a) What is a Shallow Copy?
+            //shallow  copy : is copying the object except reference types (copying top level fields)(it isn't copying fields that are arrays or objects)
+            //a) What is a deep Copy?
+            //deep copy: is copying the object with all fields the copy is independent so it's copy the nested objects and 
+            // the arrays too
+            //c) What happens to reference-type members when a Shallow Copy is created?
+            // they are not duplicated only their references duplicate 
+            //d) What happens to reference-type members when a Deep Copy is created?
+            // they duplicate cause the deep copy creates an independent copy of the object
+            //e) Give one situation where Deep Copy would be safer than Shallow Copy.
+            // when u want to create a copier that copies any class whether it contains reference types or not
+            // so when the copier start copying the shallow copy only copies the top statements fields and it will not 
+            // duplicate the reference type fields on the other hand if the copier is a deep copy it will duplicate every
+            //field in the class whether it is a top level statement or not cause deep copy creates an independent copy
+            //of the object
+
+            #endregion
             #endregion
         }
     }
