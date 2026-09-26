@@ -57,6 +57,37 @@
             // u can't inherit it we can say it's sealed implicitly
 
             #endregion
+            #region Q4  Extension Methods
+            //a) What is an Extension Method?
+            // lets u add a new functions to an exsisting types like Person class 
+            // it is a static method in a static class and adding this keyword to the first parameter
+            //b) What keyword must be used in the first parameter of an extension method?
+            // this
+            //c) Where must an extension method be declared?
+            // inside a static class
+            //d) Can an extension method access private members of the class it extends?
+            // no it can't 
+
+            #endregion
+            #region Q5  Partial Classes and Partial Methods
+            //a) What is a Partial Class?
+            //a partial class is a class that let's u create the implementation of the class in multiple files 
+            //same class with it's same name using partial key word in multiple files so it makes the huge implementations
+            // readable and maintainable
+            //b) Why would a developer split one class into multiple files?
+            //cause it's good when the implementation of the class is so big so it improves readability
+            // easy to maintain improves maintainability 
+            // when a team works in the same class to avoid conflicts 
+
+            //c) What is a Partial Method?
+            //  is a method declaration without an implementation in the class it can implemented in another part  
+            // every part must use partial keyword , with the same signature 
+            //it is  implicitly private
+
+            //d) What happens if a declared partial method has no implementation?
+            // the compiler removes it as it is not called 
+
+            #endregion
             #endregion
         }
     }
