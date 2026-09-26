@@ -36,6 +36,27 @@
             //of the object
 
             #endregion
+            #region Q3  Static Members
+            //a) What is a static field, and how is it different from an instance field?
+            // u can access the static field by the class name on the other hand u access the instance field
+            // by creating an object from the class using . operator
+            // and the static filed only got 1 copy in the memory shared by every instance of the class it belongs to the class
+            // instance field creates new object every time in the memory every time  u create an instance field  
+
+            //b) What is a static method? Can a static method directly access instance members?
+            // static methods belong to the class not any specific object u call it using class name 
+            // no it can't access instance members and u cant use this keyword in the static functions , 
+            // it can access static fields
+            //c) What is a static constructor, and when is it executed?
+            // it is a special type of constructors and it runs automatic once u create an instance from the class 
+            // it used to initialize static fields  too 
+            //it excutes when u  create an instance of the class once 
+            //What is a static class? Can you create an object from a static class?
+            // it is a class that contains only static members  , no u can't create an object from static class
+            // we use it when creating utility or helper classes
+            // u can't inherit it we can say it's sealed implicitly
+
+            #endregion
             #endregion
         }
     }
