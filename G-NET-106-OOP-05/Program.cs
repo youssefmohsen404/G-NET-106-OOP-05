@@ -1,4 +1,8 @@
-﻿namespace G_NET_106_OOP_05
+﻿
+using G_NET106_OOP_02.part2;
+using G_NET106_OOP_03;
+
+namespace G_NET_106_OOP_05
 {
     internal class Program
     {
@@ -88,6 +92,74 @@
             // the compiler removes it as it is not called 
 
             #endregion
+            #endregion
+            #region Part 02 — Practical
+            //object copy
+            DeliveryAddress address = new DeliveryAddress("cairo" , "tahrir" , 10);
+            Shipment shipment = new Shipment("Phone", 1, 40, address);
+            
+           Shipment shipment1 = shipment.CopyShipment();
+            Console.WriteLine(shipment);
+            Console.WriteLine();
+            Console.WriteLine(shipment1);
+
+            // after changing 
+            shipment1.Weight = 5;
+            
+            Console.WriteLine();
+            Console.WriteLine("after changing weight");
+            Console.WriteLine(shipment);
+            Console.WriteLine();
+            Console.WriteLine(shipment1);
+            //shallow copying 
+            Console.WriteLine();
+            Console.WriteLine("shallow copying ");
+            Console.WriteLine("before editing address");
+            Console.WriteLine(shipment);
+            Console.WriteLine();
+            Console.WriteLine(shipment1);
+            Shipment shallow = shipment.ShallowCopying();
+            Console.WriteLine();
+            Console.WriteLine("after changing copied  address street");
+            shallow.destination.street = "syria";
+            Console.WriteLine();
+            Console.WriteLine(shipment);
+            Console.WriteLine();
+            Console.WriteLine(shallow);
+            Console.WriteLine();
+            //deep copy
+            Console.WriteLine("address before changing in deep copy ");
+            Shipment deepCopy = shipment.DeepCopy();
+            Console.WriteLine();
+            Console.WriteLine(shipment);
+            Console.WriteLine();
+            Console.WriteLine(deepCopy);
+            Console.WriteLine("after changing street in deep copy");
+            deepCopy.destination.street = "el gesh road";
+
+            Console.WriteLine();
+            Console.WriteLine(shipment);
+            Console.WriteLine();
+            Console.WriteLine(deepCopy);
+            Console.WriteLine();
+            // static 
+            Console.WriteLine("static");
+            Console.WriteLine(Shipment.TotalShipmentsCreated);
+            // 3 / 1- shipment 2- object copy -3 deep copy
+            Console.WriteLine();
+            // static method 
+            Console.WriteLine($"total shipment created : {Shipment.TotalShipmentsCreated}");
+            DeliveryUtilities.PrintSeparator();
+            DeliveryUtilities.PrintSystemTitle();
+
+            DeliveryUtilities.PrintSeparator();
+            //extension methods
+            shipment.GetSummary();
+            shipment.IsDelivered();
+            // partial methods
+            DeliveryUtilities.PrintSeparator() ;
+            shipment.UpdateTrackingStatus("Out For Delivery");
+
             #endregion
         }
     }
